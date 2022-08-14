@@ -2,7 +2,11 @@ import React from "react"
 import { useTheme } from "../hooks/useTheme"
 import styles from '../App.scss'
 
-const themeColors = ["#808080", '#A7EB88', '#522558', "#bF5604", "#ffffff",]
+const themeColors = ["rgba(255, 219, 71, 0.7)", 
+"rgba(41, 163, 213, 0.5)", 
+"rgba(174, 70, 255, 0.5)", 
+"rgba(255, 121, 0, 0.5)", 
+"#" + ((1<<24)*Math.random() | 0).toString(16),]
 
 export default function ThemeSelector() {
   const { changeColor } = useTheme()

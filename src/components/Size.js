@@ -25,10 +25,11 @@ export default function Size({companies}) {
       data: companies.map((company) => company.investmentSize),
       hoverOffset: 2,
       hoverBorderJoinStyle: 'round',
-      backgroundColor: [
-        'rgb(25, 99, 132)','#800000','(130, 255, 255) ',
-        '#806750','#00FF00','(238, 130, 238)','(240, 198, 29)'  
-      ],
+      backgroundColor:[ "#" + ((1<<24)*Math.random() | 0).toString(16),
+      "#" + ((1<<24)*Math.random() | 0).toString(16),
+      "#" + ((1<<24)*Math.random() | 0).toString(16),
+      "#" + ((1<<24)*Math.random() | 0).toString(16),
+      "#" + ((1<<24)*Math.random() | 0).toString(16),], //well....this need some improvement
       borderColor: ['#c0c0c0'],
       rotation:5,
       borderRadius:3,
@@ -40,10 +41,10 @@ export default function Size({companies}) {
   })
 
   return (
-  <div className={styles.size} style={{ background: color }}>
+  <div className={styles.size} style={{ background: color}}>
     <h3>COMPANIES BY INVESTMENT SIZE</h3>
     <div className={styles.counter}>
-      <h1 style={{marginTop: 250, marginLeft: 200, fontSize: 40}}>{count} </h1>
+      <h1 style={{marginTop: 250, marginLeft: 205, fontSize: 40, position: "absolute"}}>{count} </h1>
       <h1>{numCompanies}</h1>
       <div className={styles.graph}>
         <Doughnut 

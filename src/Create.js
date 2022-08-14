@@ -14,19 +14,21 @@ export default function Create() {
     const [investmentSize, setInvestmentSize] = useState('')
     const history = useHistory()
     const [addCompany, { error}] = useMutation(ADD_COMPANY)    
-    const newCompany = (e) => {    
-        addCompany({
-            variables:{
-                name:name,
-                stage:stage,
-                sector:sector,
-                investmentSize:Number(investmentSize),
-            }
-        });
-        if (error){
-            console.log(error);
+    const newCompany = async (e) => {
+        try {    
+            await addCompany({
+                variables:{
+                    name:name,
+                    stage:stage,
+                    sector:sector,
+                    investmentSize:Number(investmentSize),
+            },
+            });
         }
-    }
+        catch (error){
+            console.log(error);
+        }}
+    
     function handleSubmit(e) {
         e.preventDefault();
         if (newCompany){            
@@ -35,7 +37,7 @@ export default function Create() {
     }
     
     return (
-      <div style={{ background: color }}>
+      <div style={{ background: color, borderRadius:1000,}}>
         <div className={styles.create} >
             <h2>ADD NEW COMPANY</h2>
             <form onSubmit={handleSubmit}>

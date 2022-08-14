@@ -10,7 +10,7 @@ export default function Sector({companies}) {
   // elegantnejšie ?
   const { color, changeColor } = useTheme()
   return (
-    <div className={styles.sector} style={{ background: color }}>
+    <div className={styles.sector} style={{ background: color }}> 
       <h3>COMPANIES BY SECTOR</h3> 
         <table>   
           <thead>                              

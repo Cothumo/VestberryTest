@@ -30,7 +30,7 @@ body {
     color: rgb(82, 82, 82);
     max-width: 380px;
     margin: 60px auto;
-    font-size: 226;  
+    font-size: 226;
   }
 
 .create h2{
@@ -197,7 +197,7 @@ body {
   width: 600px;
   height: 150px;
   margin-top: -150px;
-  position: static;
+  position: sticky;
 }
 
 .size h3{
@@ -213,7 +213,8 @@ body {
 }
 
 .counter{
-  margin: 1px 150px;
+  margin: 20px 30px;
+  position: auto;
 }
 
 .size h1{
@@ -244,6 +245,7 @@ body {
 .sector table {
   table-layout: fixed;
   width: 90%;
+  justify-content: space-between;
   background-color: rgb(248, 248, 248);
   border: 2px ridge #ffffff; 
 }
