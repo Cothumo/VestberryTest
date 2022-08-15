@@ -31,13 +31,13 @@ export default function Create() {
     
     function handleSubmit(e) {
         e.preventDefault();
-        if (newCompany){            
-            history.push("/"),      //necessary?, or is it actually working correctly ?
-            location. reload(0)}  //Have to reload, otherwise wont render new company...better solution ?  
+        if (newCompany){
+            location. reload(0)           
+            }  //Have to reload, otherwise wont render new company...better solution ?  
     }
     
     return (
-      <div style={{ background: color, borderRadius:1000,}}>
+      <div style={{ background: color}}>
         <div className={styles.create} >
             <h2>ADD NEW COMPANY</h2>
             <form onSubmit={handleSubmit}>
@@ -52,8 +52,8 @@ export default function Create() {
                         required
                     />
                     </label>
-                
-                    <label>
+                    
+                    <label> 
                     <span>Stage:</span>
                     <select onChange={(e) => setStage(e.target.value)} className={styles.select} defaultValue="">
                     <option value="" disabled>Select stage from the list</option>
@@ -99,3 +99,4 @@ export default function Create() {
 //message from network graphql: {"data":{"addCompany":{"name":"sdfsaf","stage":"Series A","sector":"IOT","investmentSize":344,"__typename":"Company"}}}
 // but mutations returns as "null"
 //wasnt able to implement comma separator(thousands) for amout input, gray font select deafult
+//useModal

@@ -34,7 +34,7 @@ export default function Size({companies}) {
       rotation:5,
       borderRadius:3,
       hoverBorderWidth:4,
-      cutout:140,
+      cutout:150,
       radius: 100
     }],
       
