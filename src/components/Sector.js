@@ -29,7 +29,7 @@ export default function Sector({companies}) {
               <td>IOT</td>
             </tr>   
           </thead>
-          <thead>
+          <thead >
             <tr>
             <td>
               <img src='../icons/notes.png'/> 
