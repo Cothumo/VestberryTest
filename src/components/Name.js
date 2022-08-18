@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import styles from '../App.scss'
 import { useTheme } from 'hooks/useTheme'
 import { useState } from 'react'
